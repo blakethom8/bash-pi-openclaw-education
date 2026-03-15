@@ -26,7 +26,7 @@ Done. You now understand the core concepts.
 
 ---
 
-## 📚 Three Learning Paths
+## 📚 Learning Paths
 
 ### Path 1: "I'm new to bash"
 
@@ -35,59 +35,65 @@ Done. You now understand the core concepts.
 1. **Module 1:** Bash Fundamentals
    - Read: `01-bash-fundamentals/1.2-core-commands.md`
    - Read: `01-bash-fundamentals/1.3-pipes-and-composition.md`
-   - Try: `examples/01-basic-pipeline.sh`
 
 2. **Module 2:** Think in Bash
    - Read: `02-think-in-bash/2.1-philosophy.md`
-   - Try: `examples/04-bash-accessible-wrapper.sh`
 
 3. **Module 3:** Pi Architecture
-   - Read: `03-pi-architecture/README.md`
+   - Read: `03-pi-architecture/3.1-core-loop.md`
    - Try: `examples/07-mini-agent-loop.sh`
 
 ---
 
-### Path 2: "I know bash, teach me the agent stuff"
+### Path 2: "I know bash, teach me agents"
 
 **Time:** 1-2 hours
 
-1. **Skip to Module 2:**
-   - Read: `02-think-in-bash/2.1-philosophy.md` (why bash for agents)
-   - Read: `02-think-in-bash/2.2-problem-decomposition.md` (how to think)
-   - Read: `02-think-in-bash/2.5-bash-accessible-design.md` (design patterns)
-
-2. **Module 3: Pi Architecture**
-   - Read: `03-pi-architecture/3.1-core-loop.md` (how Pi works)
-   - Read: `03-pi-architecture/3.2-four-tools.md` (the 4 tools)
-   - Read: `03-pi-architecture/3.4-skills-system.md` (extensibility)
-
-3. **Try it:**
-   - Run: `examples/07-mini-agent-loop.sh`
-   - Run: `examples/08-skill-creation.sh`
+1. Read: `02-think-in-bash/2.1-philosophy.md`
+2. Read: `03-pi-architecture/3.1-core-loop.md` + `3.2-four-tools.md`
+3. Run: `examples/07-mini-agent-loop.sh`
+4. Build: `05-building-agents/project1-file-organizer/`
 
 ---
 
-### Path 3: "Show me real-world examples NOW"
+### Path 3: "Enterprise agent focus"
+
+**Time:** 1-2 hours
+
+1. Read: `03-pi-architecture/3.4-skills-system.md`
+2. Read: `06-gemini-cli-comparison/6.2-domain-native-context.md`
+3. Read: `07-where-agents-live/7.6-enterprise-deployment.md`
+4. Run a real project:
+   ```bash
+   cd 05-building-agents/project2-data-pipeline/
+   ./agent.sh tests/sample-data.csv
+
+   cd ../project4-api-integration/
+   ./agent.sh "cardiology" --mock
+   ```
+
+---
+
+### Path 4: "Show me real-world examples NOW"
 
 **Time:** 30 minutes
 
-1. **Read these three:**
-   - `02-think-in-bash/2.1-philosophy.md` — Why bash matters
-   - `02-think-in-bash/2.6-real-world-examples.md` — Applied examples
-   - `03-pi-architecture/3.2-four-tools.md` — Pi's interface
+1. **Read:**
+   - `02-think-in-bash/2.1-philosophy.md`
+   - `03-pi-architecture/3.2-four-tools.md`
 
-2. **Run these:**
+2. **Run:**
    ```bash
-   cd examples/
-   
-   # Podcast summarizer
-   cat 09-podcast-summarizer.sh
-   
-   # Data pipeline (your use case)
-   cat 10-data-pipeline.sh
-   
-   # Provider search
-   cat 11-provider-search.sh
+   # Interactive mini-agent
+   cd examples/ && ./07-mini-agent-loop.sh
+
+   # Data pipeline with claims data
+   cd 05-building-agents/project2-data-pipeline/
+   ./agent.sh tests/sample-data.csv
+
+   # NPI provider lookup
+   cd ../project4-api-integration/
+   ./agent.sh "Smith" --mock
    ```
 
 3. **Adapt one to your needs**
@@ -243,16 +249,27 @@ find . -name "*.py" | xargs wc -l | tail -1
 ✅ Make your work bash-accessible
 
 ### After Module 3 (Pi Architecture):
-✅ Understand how agent loops work  
-✅ See why 4 tools are enough  
-✅ Know how skills extend functionality  
+✅ Understand how agent loops work
+✅ See why 4 tools are enough
+✅ Know how skills extend functionality
 ✅ Design self-modifying systems
 
 ### After Module 5 (Building Agents):
-✅ Build your own mini-agent  
-✅ Create bash-accessible workflows  
-✅ Design data pipelines  
-✅ Apply to your actual work (claims data, reports, etc.)
+✅ Build your own mini-agent
+✅ Create bash-accessible workflows
+✅ Design data pipelines
+✅ Integrate real APIs (NPI Registry)
+
+### After Module 6 (Gemini CLI):
+✅ Understand what's the same vs. what's new
+✅ Know what "domain-native context" means for your stack
+✅ Have DIY equivalents for Plan Mode, checkpointing, etc.
+
+### After Module 7 (Where Agents Live):
+✅ Explain what a daemon is and set one up
+✅ Choose between VM, container, and serverless for your use case
+✅ Sandbox an agent safely
+✅ Know exactly what lives where in your Hetzner/Supabase setup
 
 ---
 

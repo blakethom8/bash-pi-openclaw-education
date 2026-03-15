@@ -9,9 +9,11 @@
 By the end of this guide, you'll understand:
 - **Why bash is the universal interface** for agents
 - **How to "think in bash"** for building extensible workflows
-- **Pi's architecture** and why it's minimal yet powerful
-- **OpenClaw's patterns** for multi-turn conversations
-- **How to build your own agents** using bash primitives
+- **Pi's architecture** — the while loop + 4 tools pattern (pi-mono)
+- **OpenClaw's patterns** for multi-turn conversations and enterprise workflows
+- **How to build your own agents** using bash and Python
+- **How Gemini CLI compares** — what's the same, what's different, what to steal
+- **Where agents actually live** — processes, daemons, VMs, containers, sandboxing
 
 ---
 
@@ -44,41 +46,70 @@ The mental model shift: bash as a universal interface.
 ---
 
 ### **Module 3: Pi Architecture** (`03-pi-architecture/`)
-How Pi works under the hood.
+How pi-mono works under the hood. Source: [github.com/badlogic/pi-mono](https://github.com/badlogic/pi-mono)
 - [ ] 3.1 The While Loop + 4 Tools Pattern
-- [ ] 3.2 Read, Write, Edit, Bash (the only tools you need)
-- [ ] 3.3 Tool Calls and Responses
+- [ ] 3.2 Read, Write, Edit, Bash — real behavior, truncation, precision
+- [ ] 3.3 How the Agent Decides What to Do Next
 - [ ] 3.4 Skills: Extensible, Self-Modifying Code
-- [ ] 3.5 Memory Without a Memory System
+- [ ] 3.5 Memory Without a Memory System (files as state)
 - [ ] 3.6 Pi vs. Claude Code vs. Cursor
 
-**Time:** 1-2 hours
+**Time:** 2-3 hours
 
 ---
 
 ### **Module 4: OpenClaw Patterns** (`04-openclaw-patterns/`)
 Understanding OpenClaw's conversation flow and architecture.
-- [ ] 4.1 OpenClaw's Architecture (Gateway, Sessions, Agents)
-- [ ] 4.2 Multi-Turn Conversations (how context flows)
-- [ ] 4.3 Tool Execution (read, write, edit, exec)
-- [ ] 4.4 Skills System (extending OpenClaw)
-- [ ] 4.5 Workflow Patterns (common multi-step tasks)
-- [ ] 4.6 Case Study: Podcast Summarization Workflow
+- [ ] 4.1 OpenClaw vs. Pi (what's added)
+- [ ] 4.2 Multi-Turn Conversation Flow
+- [ ] 4.3 Tool Execution Patterns
+- [ ] 4.4 Skills System (enterprise skill examples)
+- [ ] 4.5 Workflow Patterns (5 named patterns)
+- [ ] 4.6 Case Study: Podcast Summarization + Monthly Claims Report
 
 **Time:** 2-3 hours
 
 ---
 
 ### **Module 5: Building Your Own Agents** (`05-building-agents/`)
-Hands-on: create mini-agents using bash.
-- [ ] 5.1 Exercise: File Organizer Agent
-- [ ] 5.2 Exercise: Data Pipeline Agent
-- [ ] 5.3 Exercise: Report Generator Agent
-- [ ] 5.4 Exercise: API Integration Agent
-- [ ] 5.5 Exercise: Multi-Tool Workflow Agent
-- [ ] 5.6 Project: Build Your Own Pi-Style Agent
+Hands-on projects with real, runnable code.
+- [ ] Project 1: File Organizer Agent (bash, `--dry-run`, logging)
+- [ ] Project 2: Data Pipeline Agent (CSV → stats → report, checkpointing)
+- [ ] Project 3: Report Generator Agent (JSON → standalone HTML report)
+- [ ] Project 4: NPI API Integration Agent (real public API, composable scripts)
+- [ ] Project 5: Custom Agent Templates (generic + enterprise-wired)
+- [ ] Exercise: CRM CLI (Python argparse, 8 commands, full solution included)
 
 **Time:** 3-4 hours
+
+---
+
+### **Module 6: Gemini CLI Comparison** (`06-gemini-cli-comparison/`)
+What Google's Gemini CLI does the same, what it adds, and what to steal.
+- [ ] 6.1 Core Architecture — the same loop, one extra line (the approval gate)
+- [ ] 6.2 Domain-Native Context — why GCP baked in is their secret sauce
+- [ ] 6.3 Production Features — Plan Mode, subagents, checkpointing, MCP, hooks
+- [ ] 6.4 What to Steal — DIY equivalents for Pi/OpenClaw users
+
+**Key insight:** Your AGENTS.md with Hetzner/Supabase details IS your "GCP extension."
+
+**Time:** 1-2 hours
+
+---
+
+### **Module 7: Where Agents Live** (`07-where-agents-live/`)
+Infrastructure, processes, daemons, VMs, containers, and sandboxing.
+- [ ] 7.1 The Agent as a Process (RAM, CPU, filesystem, env vars)
+- [ ] 7.2 Daemons and Services (what a daemon is, systemd, OpenClaw as daemon)
+- [ ] 7.3 VMs, Containers, and Serverless (when to use each)
+- [ ] 7.4 Filesystem Access (permissions, workspace conventions, what can go wrong)
+- [ ] 7.5 Sandboxing (5 levers: filesystem, user, network, resources, time limits)
+- [ ] 7.6 Enterprise Deployment (Hetzner + Supabase + Azure mapped out)
+- [ ] 7.7 Reference Architecture (what lives where, decision guide)
+
+**Key insight:** The LLM runs on Anthropic's servers. Everything else runs on yours.
+
+**Time:** 2-3 hours
 
 ---
 
@@ -87,29 +118,36 @@ Hands-on: create mini-agents using bash.
 ### **Prerequisites**
 - macOS or Linux terminal
 - Basic familiarity with command line (can navigate folders, run commands)
+- Python 3 (for Module 5 projects)
 - OpenClaw installed (optional but recommended for Module 4)
 
-### **Learning Path**
+### **Learning Paths**
 
 **If you're new to bash:**
-1. Start with Module 1 (Bash Fundamentals)
-2. Work through examples in `examples/`
-3. Try exercises in `exercises/`
+1. Start with Module 1 → Module 2 → Module 3
+2. Run the mini agent loop: `examples/07-mini-agent-loop.sh`
+3. Build something in Module 5
 
 **If you know bash basics:**
-1. Skip to Module 2 (Think in Bash)
-2. Read Pi concepts (Module 3)
-3. Explore OpenClaw patterns (Module 4)
+1. Skip to Module 2 (Think in Bash) → Module 3 (Pi Architecture)
+2. Explore OpenClaw patterns (Module 4)
+3. Build agents in Module 5
 
-**If you want to build agents:**
-1. Quick review: Modules 1-2
-2. Deep dive: Module 3 (Pi Architecture)
-3. Hands-on: Module 5 (Building Agents)
+**If you want to understand the infrastructure:**
+1. Read Module 3 (Pi Architecture) for the loop
+2. Jump to Module 7 (Where Agents Live)
+3. Then Module 6 (Gemini CLI) for comparison
 
-### **Interactive Learning**
-- **Jupyter Notebooks** (`notebooks/`) — Run code interactively
-- **Code Examples** (`examples/`) — Copy-paste working scripts
-- **Exercises** (`exercises/`) — Practice with solutions
+**If you want to build enterprise agents now:**
+1. Read Module 3 quickly (especially 3.1 and 3.4)
+2. Read Module 6.2 (domain-native context)
+3. Work through Module 5 projects (real runnable code)
+
+### **Runnable Code**
+- `examples/07-mini-agent-loop.sh` — interactive mini Pi demo
+- `05-building-agents/project*/agent.sh` — 4 working bash agents
+- `exercises/module5-custom-cli/crm.py` — working CRM CLI
+- `exercises/module5-custom-cli/solution/crm_full.py` — complete solution
 
 ---
 
@@ -118,126 +156,103 @@ Hands-on: create mini-agents using bash.
 | Concept | File | Description |
 |---------|------|-------------|
 | Bash basics | `01-bash-fundamentals/1.2-core-commands.md` | Essential commands agents use |
-| Composability | `02-think-in-bash/2.3-composability.md` | Building complex workflows |
-| Pi's 4 tools | `03-pi-architecture/3.2-four-tools.md` | Read, write, edit, bash |
-| Multi-turn flow | `04-openclaw-patterns/4.2-multi-turn.md` | How conversations work |
-| Agent template | `05-building-agents/agent-template.sh` | Starter code |
+| Pi's loop | `03-pi-architecture/3.1-core-loop.md` | The while loop explained |
+| Pi's 4 tools | `03-pi-architecture/3.2-four-tools.md` | Read, write, edit, bash — real behavior |
+| Skills system | `03-pi-architecture/3.4-skills-system.md` | How to extend without adding tools |
+| Multi-turn flow | `04-openclaw-patterns/4.2-multi-turn-flow.md` | How conversations build context |
+| Workflow patterns | `04-openclaw-patterns/4.5-workflow-patterns.md` | 5 named enterprise patterns |
+| Domain context | `06-gemini-cli-comparison/6.2-domain-native-context.md` | AGENTS.md as your GCP extension |
+| Where agents run | `07-where-agents-live/7.7-putting-it-together.md` | Full reference architecture |
+| Agent template | `05-building-agents/project5-custom-agent/enterprise-template.sh` | Enterprise starter |
 
 ---
 
 ## 🎓 Learning Goals by Module
 
 ### Module 1: Bash Fundamentals
-**You'll be able to:**
-- Run bash commands confidently
-- Chain commands with pipes
-- Write simple bash scripts
-- Debug errors using exit codes
+- Run bash commands confidently, chain with pipes, write scripts, debug exit codes
 
 ### Module 2: Think in Bash
-**You'll be able to:**
-- Break problems into bash-solvable steps
-- Recognize when bash is the right tool
-- Design workflows that agents can execute
-- Make your data/processes bash-accessible
+- Break problems into bash-solvable steps, design agent-friendly workflows
 
 ### Module 3: Pi Architecture
-**You'll be able to:**
-- Explain how Pi works (while loop + 4 tools)
-- Understand why "bash is all you need"
-- See how skills extend functionality
-- Compare Pi to other coding agents
+- Explain the while loop + 4 tools, understand skills/memory, compare frameworks
 
 ### Module 4: OpenClaw Patterns
-**You'll be able to:**
-- Trace multi-turn conversations in OpenClaw
-- Understand tool execution flow
-- Use skills effectively
-- Design complex workflows
+- Trace multi-turn conversations, design enterprise workflows, write effective skills
 
 ### Module 5: Building Agents
-**You'll be able to:**
-- Build a basic agent from scratch
-- Create bash-accessible workflows
-- Compose tools into complex tasks
-- Design self-extending systems
+- Build working bash agents, create data pipelines, integrate real APIs (NPI Registry)
+
+### Module 6: Gemini CLI Comparison
+- Understand what's the same vs. new, apply domain-native context to your own stack
+
+### Module 7: Where Agents Live
+- Explain what a daemon is, choose between VM/container/serverless, sandbox agents safely
 
 ---
 
-## 💡 Key Insights (Spoilers!)
+## 💡 Key Insights
 
-> **"Bash is all you need"**  
-> If an LLM can use bash competently, it can access **anything** on your system. No need for 50 specialized tools.
+> **"Bash is all you need"**
+> If an LLM can use bash competently, it can access **anything** on your system.
 
-> **"Composability > Features"**  
-> Don't build monolithic tools. Build small bash scripts that compose together.
+> **"The agent is a process"**
+> Its capabilities = what that process is allowed to do, on the machine it runs on.
 
-> **"Files are memory"**  
+> **"Your AGENTS.md is your GCP extension"**
+> Domain-native context (Hetzner, Supabase schemas, naming conventions) is your competitive advantage.
+
+> **"Files are memory"**
 > Agents don't need complex memory systems. The file system IS the memory.
 
-> **"Self-modifying code"**  
-> The best agents can modify their own tools and scripts on the fly.
+> **"4 tools vs 17 tools vs bash"**
+> Named tools = precision + structure. Bash = power. You need both.
 
 ---
 
 ## 📚 Recommended Reading
 
-**Before starting:**
-- Syntax 976 Podcast Summary (`~/openclaw/workspace/podcasts/syntax-976-technical-summary.html`)
-- OpenClaw docs (`/usr/local/lib/node_modules/openclaw/docs/`)
+**Core references:**
+- [pi-mono source](https://github.com/badlogic/pi-mono) — the canonical Pi implementation
+- [Gemini CLI deep dive](https://codelabs.developers.google.com/gemini-cli-deep-dive) — Google's take on the same pattern
 
 **Alongside learning:**
 - [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
-- [Pi GitHub repo](https://github.com/mitsuhiko/pi-mono)
-- [OpenClaw docs](https://docs.openclaw.ai)
 
 ---
 
 ## 🚀 Getting Started
 
-**Right now:**
 ```bash
 cd ~/Repo/bash-pi-openclaw-education
 
-# Start with Module 1
-open 01-bash-fundamentals/README.md
+# Run the interactive mini-agent demo (5 min)
+cd examples/ && ./07-mini-agent-loop.sh
 
-# Or jump to interactive notebooks
-jupyter notebook notebooks/
+# Or start with the philosophy
+open 02-think-in-bash/2.1-philosophy.md
+
+# Or jump straight to building
+open 05-building-agents/README.md
 ```
-
-**Learn by doing:**
-Each module has:
-- Theory (markdown files)
-- Examples (working code)
-- Exercises (with solutions)
-- Notebooks (interactive)
-
----
-
-## 🎯 Next Steps After This Guide
-
-1. **Build a real agent** for your workflow (data processing, reports, etc.)
-2. **Contribute to Pi** or create OpenClaw skills
-3. **Apply to your venture** (data agent, report generation)
-4. **Share what you learned** (write about it, help others)
 
 ---
 
 ## 📝 Progress Tracker
 
-Track your progress:
 - [ ] Module 1: Bash Fundamentals
 - [ ] Module 2: Think in Bash
 - [ ] Module 3: Pi Architecture
 - [ ] Module 4: OpenClaw Patterns
 - [ ] Module 5: Building Agents
-- [ ] Final Project: Your Own Agent
+- [ ] Module 6: Gemini CLI Comparison
+- [ ] Module 7: Where Agents Live
+- [ ] Final Project: Your Own Enterprise Agent
 
 ---
 
-**Created:** 2026-02-09  
-**Author:** Chief (OpenClaw Agent)  
+**Created:** 2026-02-09 | **Updated:** 2026-03-15
 **For:** Blake Thomson
 
-**Let's build agents that actually work.** 🎯
+**Let's build agents that actually work.**
