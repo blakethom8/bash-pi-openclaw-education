@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <style>
+    /* All CSS is embedded — this file is self-contained, no external dependencies */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      margin: 0;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: #ffffff;
+      padding: 32px 40px;
+    }
+
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header .meta {
+      font-size: 13px;
+      opacity: 0.80;
+    }
+
+    /* Body content */
+    .content {
+      padding: 32px 40px;
+    }
+
+    /* Summary cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: #e8eaf6;
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stat-card .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a237e;
+      line-height: 1;
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      color: #555;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 18px;
+      color: #1a237e;
+      margin: 32px 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    /* Summary paragraph */
+    .summary-text {
+      background: #f8f9ff;
+      border-left: 4px solid #3f51b5;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    /* Data table */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead th {
+      background: #1a237e;
+      color: #ffffff;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f5f6ff;
+    }
+
+    tbody tr:hover {
+      background: #e8eaf6;
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+    }
+
+    /* Badges for status fields */
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-green  { background: #e8f5e9; color: #2e7d32; }
+    .badge-orange { background: #fff3e0; color: #e65100; }
+    .badge-red    { background: #ffebee; color: #c62828; }
+    .badge-blue   { background: #e3f2fd; color: #1565c0; }
+
+    /* Footer */
+    .footer {
+      background: #f5f6ff;
+      border-top: 1px solid #e0e0e0;
+      padding: 16px 40px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header: title and metadata -->
+    <div class="header">
+      <h1>{{TITLE}}</h1>
+      <div class="meta">Generated: {{DATE}} &nbsp;|&nbsp; {{META_LINE}}</div>
+    </div>
+
+    <div class="content">
+
+      <!-- Summary statistics cards -->
+      <div class="summary-grid">
+        {{STAT_CARDS}}
+      </div>
+
+      <!-- Summary narrative text -->
+      <h2>Summary</h2>
+      <div class="summary-text">
+        {{SUMMARY}}
+      </div>
+
+      <!-- Main data table -->
+      <h2>{{TABLE_TITLE}}</h2>
+      <div class="table-wrapper">
+        {{TABLE}}
+      </div>
+
+    </div><!-- /content -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>Report Generator Agent</span>
+      <span>{{DATE}}</span>
+    </div>
+
+  </div><!-- /container -->
+</body>
+</html>

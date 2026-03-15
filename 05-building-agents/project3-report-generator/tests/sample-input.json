@@ -1,0 +1,115 @@
+{
+  "search_query": "cardiologist San Francisco",
+  "generated_at": "2026-01-15",
+  "source": "NPI Registry + Provider Directory",
+  "providers": [
+    {
+      "name": "Dr. Sarah Chen MD",
+      "specialty": "Cardiology",
+      "address": "450 Sutter St Suite 1200, San Francisco, CA 94108",
+      "phone": "(415) 555-0142",
+      "npi": "1234567890",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. James Patel MD",
+      "specialty": "Interventional Cardiology",
+      "address": "2333 Buchanan St, San Francisco, CA 94115",
+      "phone": "(415) 555-0287",
+      "npi": "1345678901",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Linda Nguyen MD",
+      "specialty": "Cardiology",
+      "address": "1 Daniel Burnham Ct Suite 295C, San Francisco, CA 94109",
+      "phone": "(415) 555-0364",
+      "npi": "1456789012",
+      "accepting_patients": false,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Robert Kim MD",
+      "specialty": "Electrophysiology",
+      "address": "400 Parnassus Ave, San Francisco, CA 94143",
+      "phone": "(415) 555-0455",
+      "npi": "1567890123",
+      "accepting_patients": true,
+      "network_status": "out-of-network"
+    },
+    {
+      "name": "Dr. Maria Lopez MD",
+      "specialty": "Cardiology",
+      "address": "3801 Sacramento St, San Francisco, CA 94118",
+      "phone": "(415) 555-0531",
+      "npi": "1678901234",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. David Park MD",
+      "specialty": "Interventional Cardiology",
+      "address": "2100 Webster St Suite 413, San Francisco, CA 94115",
+      "phone": "(415) 555-0612",
+      "npi": "1789012345",
+      "accepting_patients": false,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Patricia Wilson MD",
+      "specialty": "Cardiology",
+      "address": "900 Hyde St Suite 3, San Francisco, CA 94109",
+      "phone": "(415) 555-0798",
+      "npi": "1890123456",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Michael Zhang MD",
+      "specialty": "Cardiac Imaging",
+      "address": "1600 Divisadero St, San Francisco, CA 94115",
+      "phone": "(415) 555-0843",
+      "npi": "1901234567",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Susan Thompson MD",
+      "specialty": "Heart Failure",
+      "address": "505 Parnassus Ave, San Francisco, CA 94143",
+      "phone": "(415) 555-0927",
+      "npi": "1012345678",
+      "accepting_patients": false,
+      "network_status": "out-of-network"
+    },
+    {
+      "name": "Dr. Kevin O'Brien MD",
+      "specialty": "Cardiology",
+      "address": "45 Castro St Suite 200, San Francisco, CA 94114",
+      "phone": "(415) 555-1014",
+      "npi": "1123456789",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Angela Reed MD",
+      "specialty": "Preventive Cardiology",
+      "address": "2200 Post St Suite 305, San Francisco, CA 94115",
+      "phone": "(415) 555-1105",
+      "npi": "1234509876",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    },
+    {
+      "name": "Dr. Thomas Hall MD",
+      "specialty": "Electrophysiology",
+      "address": "3700 California St, San Francisco, CA 94118",
+      "phone": "(415) 555-1223",
+      "npi": "1345609876",
+      "accepting_patients": true,
+      "network_status": "in-network"
+    }
+  ]
+}

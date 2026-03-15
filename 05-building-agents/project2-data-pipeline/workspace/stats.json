@@ -1,0 +1,63 @@
+{
+  "total_records": 28,
+  "total_amount": 54113.49,
+  "overall_average": 1932.62,
+  "by_category": {
+    "imaging": {
+      "count": 4,
+      "total": 5420.0,
+      "average": 1355.0,
+      "min": 780.0,
+      "max": 2100.0
+    },
+    "inpatient": {
+      "count": 5,
+      "total": 39500.0,
+      "average": 7900.0,
+      "min": 4500.0,
+      "max": 12800.0
+    },
+    "lab": {
+      "count": 3,
+      "total": 950.0,
+      "average": 316.67,
+      "min": 225.0,
+      "max": 415.0
+    },
+    "office_visit": {
+      "count": 6,
+      "total": 2200.0,
+      "average": 366.67,
+      "min": 175.0,
+      "max": 1250.0
+    },
+    "pharmacy": {
+      "count": 4,
+      "total": 793.49,
+      "average": 198.37,
+      "min": 89.99,
+      "max": 342.5
+    },
+    "specialist": {
+      "count": 6,
+      "total": 5250.0,
+      "average": 875.0,
+      "min": 450.0,
+      "max": 1350.0
+    }
+  },
+  "by_status": {
+    "approved": {
+      "count": 22,
+      "total": 39428.49
+    },
+    "denied": {
+      "count": 3,
+      "total": 935.0
+    },
+    "pending": {
+      "count": 3,
+      "total": 13750.0
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "result_count": 5,
+  "results": [
+    {
+      "number": "1234567890",
+      "enumeration_type": "NPI-1",
+      "basic": {
+        "first_name": "JOHN",
+        "last_name": "SMITH",
+        "middle_name": "A",
+        "credential": "MD",
+        "gender": "M",
+        "status": "A",
+        "last_updated": "2024-03-01",
+        "enumeration_date": "2006-05-23"
+      },
+      "addresses": [
+        {
+          "address_purpose": "LOCATION",
+          "address_type": "DOM",
+          "address_1": "123 MAIN STREET SUITE 100",
+          "city": "BOSTON",
+          "state": "MA",
+          "postal_code": "021011234",
+          "telephone_number": "617-555-0100",
+          "fax_number": "617-555-0101"
+        },
+        {
+          "address_purpose": "MAILING",
+          "address_type": "DOM",
+          "address_1": "PO BOX 5001",
+          "city": "BOSTON",
+          "state": "MA",
+          "postal_code": "02101"
+        }
+      ],
+      "taxonomies": [
+        {
+          "code": "207RC0000X",
+          "taxonomy_group": "",
+          "desc": "Cardiovascular Disease",
+          "state": "MA",
+          "license": "MD12345",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "number": "1345678901",
+      "enumeration_type": "NPI-1",
+      "basic": {
+        "first_name": "SARAH",
+        "last_name": "CHEN",
+        "middle_name": "L",
+        "credential": "MD",
+        "gender": "F",
+        "status": "A",
+        "last_updated": "2024-06-15",
+        "enumeration_date": "2009-11-04"
+      },
+      "addresses": [
+        {
+          "address_purpose": "LOCATION",
+          "address_type": "DOM",
+          "address_1": "450 SUTTER STREET",
+          "city": "SAN FRANCISCO",
+          "state": "CA",
+          "postal_code": "941082619",
+          "telephone_number": "415-555-0142"
+        }
+      ],
+      "taxonomies": [
+        {
+          "code": "207RC0000X",
+          "taxonomy_group": "",
+          "desc": "Cardiovascular Disease",
+          "state": "CA",
+          "license": "CA98765",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "number": "1456789012",
+      "enumeration_type": "NPI-1",
+      "basic": {
+        "first_name": "MICHAEL",
+        "last_name": "RODRIGUEZ",
+        "credential": "MD",
+        "gender": "M",
+        "status": "A",
+        "last_updated": "2023-12-01",
+        "enumeration_date": "2011-02-17"
+      },
+      "addresses": [
+        {
+          "address_purpose": "LOCATION",
+          "address_type": "DOM",
+          "address_1": "2333 BUCHANAN STREET",
+          "city": "SAN FRANCISCO",
+          "state": "CA",
+          "postal_code": "941151520",
+          "telephone_number": "415-555-0287"
+        }
+      ],
+      "taxonomies": [
+        {
+          "code": "207RI0011X",
+          "taxonomy_group": "",
+          "desc": "Interventional Cardiology",
+          "state": "CA",
+          "license": "CA11223",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "number": "1567890123",
+      "enumeration_type": "NPI-1",
+      "basic": {
+        "first_name": "EMILY",
+        "last_name": "JOHNSON",
+        "credential": "DO",
+        "gender": "F",
+        "status": "A",
+        "last_updated": "2024-01-20",
+        "enumeration_date": "2015-08-09"
+      },
+      "addresses": [
+        {
+          "address_purpose": "LOCATION",
+          "address_type": "DOM",
+          "address_1": "3800 RESERVOIR ROAD NW",
+          "city": "WASHINGTON",
+          "state": "DC",
+          "postal_code": "200072145",
+          "telephone_number": "202-555-0389"
+        }
+      ],
+      "taxonomies": [
+        {
+          "code": "207RC0000X",
+          "taxonomy_group": "",
+          "desc": "Cardiovascular Disease",
+          "state": "DC",
+          "license": "DC33445",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "number": "1678901234",
+      "enumeration_type": "NPI-1",
+      "basic": {
+        "first_name": "DAVID",
+        "last_name": "PARK",
+        "middle_name": "S",
+        "credential": "MD PHD",
+        "gender": "M",
+        "status": "A",
+        "last_updated": "2024-09-10",
+        "enumeration_date": "2008-04-22"
+      },
+      "addresses": [
+        {
+          "address_purpose": "LOCATION",
+          "address_type": "DOM",
+          "address_1": "100 CHARLES RIVER PLAZA",
+          "city": "BOSTON",
+          "state": "MA",
+          "postal_code": "021142621",
+          "telephone_number": "617-555-0412"
+        }
+      ],
+      "taxonomies": [
+        {
+          "code": "207RE0101X",
+          "taxonomy_group": "",
+          "desc": "Cardiac Electrophysiology",
+          "state": "MA",
+          "license": "MA55667",
+          "primary": true
+        }
+      ]
+    }
+  ]
+}

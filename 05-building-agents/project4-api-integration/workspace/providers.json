@@ -1,0 +1,82 @@
+[
+  {
+    "npi": "1234567890",
+    "first_name": "JOHN",
+    "last_name": "SMITH",
+    "credential": "MD",
+    "gender": "M",
+    "status": "A",
+    "specialty": "Cardiovascular Disease",
+    "address": {
+      "street": "123 MAIN STREET SUITE 100",
+      "city": "BOSTON",
+      "state": "MA",
+      "zip": "021011234",
+      "phone": "617-555-0100"
+    }
+  },
+  {
+    "npi": "1345678901",
+    "first_name": "SARAH",
+    "last_name": "CHEN",
+    "credential": "MD",
+    "gender": "F",
+    "status": "A",
+    "specialty": "Cardiovascular Disease",
+    "address": {
+      "street": "450 SUTTER STREET",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "zip": "941082619",
+      "phone": "415-555-0142"
+    }
+  },
+  {
+    "npi": "1456789012",
+    "first_name": "MICHAEL",
+    "last_name": "RODRIGUEZ",
+    "credential": "MD",
+    "gender": "M",
+    "status": "A",
+    "specialty": "Interventional Cardiology",
+    "address": {
+      "street": "2333 BUCHANAN STREET",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "zip": "941151520",
+      "phone": "415-555-0287"
+    }
+  },
+  {
+    "npi": "1567890123",
+    "first_name": "EMILY",
+    "last_name": "JOHNSON",
+    "credential": "DO",
+    "gender": "F",
+    "status": "A",
+    "specialty": "Cardiovascular Disease",
+    "address": {
+      "street": "3800 RESERVOIR ROAD NW",
+      "city": "WASHINGTON",
+      "state": "DC",
+      "zip": "200072145",
+      "phone": "202-555-0389"
+    }
+  },
+  {
+    "npi": "1678901234",
+    "first_name": "DAVID",
+    "last_name": "PARK",
+    "credential": "MD PHD",
+    "gender": "M",
+    "status": "A",
+    "specialty": "Cardiac Electrophysiology",
+    "address": {
+      "street": "100 CHARLES RIVER PLAZA",
+      "city": "BOSTON",
+      "state": "MA",
+      "zip": "021142621",
+      "phone": "617-555-0412"
+    }
+  }
+]

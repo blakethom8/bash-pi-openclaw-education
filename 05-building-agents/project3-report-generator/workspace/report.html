@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provider Search Results — Cardiologist San Francisco</title>
+  <style>
+    /* All CSS is embedded — this file is self-contained, no external dependencies */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      margin: 0;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+      color: #ffffff;
+      padding: 32px 40px;
+    }
+
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header .meta {
+      font-size: 13px;
+      opacity: 0.80;
+    }
+
+    /* Body content */
+    .content {
+      padding: 32px 40px;
+    }
+
+    /* Summary cards */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: #e8eaf6;
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .stat-card .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a237e;
+      line-height: 1;
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      color: #555;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 18px;
+      color: #1a237e;
+      margin: 32px 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    /* Summary paragraph */
+    .summary-text {
+      background: #f8f9ff;
+      border-left: 4px solid #3f51b5;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    /* Data table */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead th {
+      background: #1a237e;
+      color: #ffffff;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f5f6ff;
+    }
+
+    tbody tr:hover {
+      background: #e8eaf6;
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+    }
+
+    /* Badges for status fields */
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-green  { background: #e8f5e9; color: #2e7d32; }
+    .badge-orange { background: #fff3e0; color: #e65100; }
+    .badge-red    { background: #ffebee; color: #c62828; }
+    .badge-blue   { background: #e3f2fd; color: #1565c0; }
+
+    /* Footer */
+    .footer {
+      background: #f5f6ff;
+      border-top: 1px solid #e0e0e0;
+      padding: 16px 40px;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header: title and metadata -->
+    <div class="header">
+      <h1>Provider Search Results — Cardiologist San Francisco</h1>
+      <div class="meta">Generated: 2026-03-15 08:55 &nbsp;|&nbsp; 12 providers &nbsp;|&nbsp; 2026-01-15</div>
+    </div>
+
+    <div class="content">
+
+      <!-- Summary statistics cards -->
+      <div class="summary-grid">
+        <div class="stat-card"><div class="value">12</div><div class="label">Total Providers</div></div>
+        <div class="stat-card"><div class="value">9</div><div class="label">Accepting Patients</div></div>
+        <div class="stat-card"><div class="value">10</div><div class="label">In-Network</div></div>
+        <div class="stat-card"><div class="value">6</div><div class="label">Specialties</div></div>
+      </div>
+
+      <!-- Summary narrative text -->
+      <h2>Summary</h2>
+      <div class="summary-text">
+        Search results for: <strong>cardiologist San Francisco</strong> Found <strong>12 providers</strong>, of which <strong>9</strong> are accepting new patients and <strong>10</strong> are in-network. Specialties covered: Cardiac Imaging, Cardiology, Electrophysiology, Heart Failure, Interventional Cardiology, and 1 more.
+      </div>
+
+      <!-- Main data table -->
+      <h2>Provider Directory</h2>
+      <div class="table-wrapper">
+        <table><thead><tr><th>Name</th><th>Specialty</th><th>Address</th><th>Phone</th><th>NPI</th><th>Network</th><th>Accepting</th></tr></thead><tbody><tr><td><strong>Dr. Sarah Chen MD</strong></td><td>Cardiology</td><td>450 Sutter St Suite 1200, San Francisco, CA 94108</td><td>(415) 555-0142</td><td><code>1234567890</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. James Patel MD</strong></td><td>Interventional Cardiology</td><td>2333 Buchanan St, San Francisco, CA 94115</td><td>(415) 555-0287</td><td><code>1345678901</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Linda Nguyen MD</strong></td><td>Cardiology</td><td>1 Daniel Burnham Ct Suite 295C, San Francisco, CA 94109</td><td>(415) 555-0364</td><td><code>1456789012</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-red">Not Accepting</span></td></tr><tr><td><strong>Dr. Robert Kim MD</strong></td><td>Electrophysiology</td><td>400 Parnassus Ave, San Francisco, CA 94143</td><td>(415) 555-0455</td><td><code>1567890123</code></td><td><span class="badge badge-red">out-of-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Maria Lopez MD</strong></td><td>Cardiology</td><td>3801 Sacramento St, San Francisco, CA 94118</td><td>(415) 555-0531</td><td><code>1678901234</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. David Park MD</strong></td><td>Interventional Cardiology</td><td>2100 Webster St Suite 413, San Francisco, CA 94115</td><td>(415) 555-0612</td><td><code>1789012345</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-red">Not Accepting</span></td></tr><tr><td><strong>Dr. Patricia Wilson MD</strong></td><td>Cardiology</td><td>900 Hyde St Suite 3, San Francisco, CA 94109</td><td>(415) 555-0798</td><td><code>1890123456</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Michael Zhang MD</strong></td><td>Cardiac Imaging</td><td>1600 Divisadero St, San Francisco, CA 94115</td><td>(415) 555-0843</td><td><code>1901234567</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Susan Thompson MD</strong></td><td>Heart Failure</td><td>505 Parnassus Ave, San Francisco, CA 94143</td><td>(415) 555-0927</td><td><code>1012345678</code></td><td><span class="badge badge-red">out-of-network</span></td><td><span class="badge badge-red">Not Accepting</span></td></tr><tr><td><strong>Dr. Kevin O'Brien MD</strong></td><td>Cardiology</td><td>45 Castro St Suite 200, San Francisco, CA 94114</td><td>(415) 555-1014</td><td><code>1123456789</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Angela Reed MD</strong></td><td>Preventive Cardiology</td><td>2200 Post St Suite 305, San Francisco, CA 94115</td><td>(415) 555-1105</td><td><code>1234509876</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr><tr><td><strong>Dr. Thomas Hall MD</strong></td><td>Electrophysiology</td><td>3700 California St, San Francisco, CA 94118</td><td>(415) 555-1223</td><td><code>1345609876</code></td><td><span class="badge badge-green">in-network</span></td><td><span class="badge badge-green">Accepting</span></td></tr></tbody></table>
+      </div>
+
+    </div><!-- /content -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>Report Generator Agent</span>
+      <span>2026-03-15 08:55</span>
+    </div>
+
+  </div><!-- /container -->
+</body>
+</html>

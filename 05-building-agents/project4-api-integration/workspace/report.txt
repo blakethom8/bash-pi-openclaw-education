@@ -1,0 +1,41 @@
+NPI REGISTRY LOOKUP RESULTS
+Generated: 2026-03-15 08:55
+Query:     [MOCK DATA]
+Total:     5 provider(s)
+────────────────────────────────────────────────────
+  1. Dr. John Smith MD
+     NPI:       1234567890
+     Specialty: Cardiovascular Disease
+     Address:   123 Main Street Suite 100, Boston, MA 021011234
+     Phone:     617-555-0100
+     Status:    A
+
+  2. Dr. Sarah Chen MD
+     NPI:       1345678901
+     Specialty: Cardiovascular Disease
+     Address:   450 Sutter Street, San Francisco, CA 941082619
+     Phone:     415-555-0142
+     Status:    A
+
+  3. Dr. Michael Rodriguez MD
+     NPI:       1456789012
+     Specialty: Interventional Cardiology
+     Address:   2333 Buchanan Street, San Francisco, CA 941151520
+     Phone:     415-555-0287
+     Status:    A
+
+  4. Dr. Emily Johnson DO
+     NPI:       1567890123
+     Specialty: Cardiovascular Disease
+     Address:   3800 Reservoir Road Nw, Washington, DC 200072145
+     Phone:     202-555-0389
+     Status:    A
+
+  5. Dr. David Park MD PHD
+     NPI:       1678901234
+     Specialty: Cardiac Electrophysiology
+     Address:   100 Charles River Plaza, Boston, MA 021142621
+     Phone:     617-555-0412
+     Status:    A
+────────────────────────────────────────────────────
+  5 result(s) | NPI Registry | 2026-03-15 08:55

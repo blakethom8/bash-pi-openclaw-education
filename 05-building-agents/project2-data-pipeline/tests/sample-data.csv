@@ -1,0 +1,29 @@
+claim_id,provider_name,amount,status,date,category
+CLM001,Dr. Sarah Smith MD,1250.00,approved,2026-01-15,office_visit
+CLM002,City Medical Center,4500.00,pending,2026-01-16,inpatient
+CLM003,Westside Radiology,890.00,approved,2026-01-17,imaging
+CLM004,Dr. James Chen MD,175.00,approved,2026-01-18,office_visit
+CLM005,Premier Pharmacy,342.50,approved,2026-01-18,pharmacy
+CLM006,Regional Hospital,12800.00,approved,2026-01-19,inpatient
+CLM007,Dr. Maria Rodriguez MD,450.00,denied,2026-01-20,specialist
+CLM008,Advanced Diagnostics Lab,225.00,approved,2026-01-21,lab
+CLM009,Dr. Michael Torres MD,1100.00,approved,2026-01-22,specialist
+CLM010,Valley Imaging Center,1650.00,pending,2026-01-22,imaging
+CLM011,Dr. Jennifer Park MD,200.00,approved,2026-01-23,office_visit
+CLM012,Central Pharmacy Plus,89.99,approved,2026-01-24,pharmacy
+CLM013,University Medical Center,9200.00,approved,2026-01-25,inpatient
+CLM014,Dr. Robert Davis MD,525.00,approved,2026-01-26,specialist
+CLM015,Metro Lab Services,310.00,denied,2026-01-27,lab
+CLM016,Dr. Lisa Johnson MD,175.00,approved,2026-01-28,office_visit
+CLM017,Precision Imaging Inc,2100.00,approved,2026-01-29,imaging
+CLM018,QuickCare Pharmacy,156.25,approved,2026-01-30,pharmacy
+CLM019,Dr. William Brown MD,850.00,approved,2026-01-31,specialist
+CLM020,General Hospital East,7600.00,pending,2026-02-01,inpatient
+CLM021,Dr. Amanda Wilson MD,225.00,approved,2026-02-02,office_visit
+CLM022,Northside Diagnostic Lab,415.00,approved,2026-02-03,lab
+CLM023,Dr. Christopher Lee MD,975.00,approved,2026-02-04,specialist
+CLM024,Capitol Pharmacy,204.75,approved,2026-02-05,pharmacy
+CLM025,Community Hospital,5400.00,approved,2026-02-06,inpatient
+CLM026,Dr. Patricia Martinez MD,175.00,denied,2026-02-07,office_visit
+CLM027,Regional Radiology Group,780.00,approved,2026-02-08,imaging
+CLM028,Dr. Kevin Thompson MD,1350.00,approved,2026-02-09,specialist
